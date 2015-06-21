@@ -11,6 +11,7 @@
 		AE88AD851B371EC7005219EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AD841B371EC7005219EB /* main.m */; };
 		AE88AD871B371EC7005219EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE88AD861B371EC7005219EB /* Images.xcassets */; };
 		AE88AD8A1B371EC7005219EB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE88AD881B371EC7005219EB /* MainMenu.xib */; };
+		AE88ADC91B373196005219EB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AE88ADC81B373196005219EB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		AE88AD841B371EC7005219EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE88AD861B371EC7005219EB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AE88AD891B371EC7005219EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AE88ADC81B373196005219EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 		AE88AD731B371EC7005219EB = {
 			isa = PBXGroup;
 			children = (
+				AE88ADC81B373196005219EB /* README.md */,
 				AE88AD7E1B371EC7005219EB /* Activity Menu */,
 				AE88AD7D1B371EC7005219EB /* Products */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE88ADC91B373196005219EB /* README.md in Sources */,
 				AE88AD851B371EC7005219EB /* main.m in Sources */,
 				AE88AD831B371EC7005219EB /* AppDelegate.m in Sources */,
 			);
