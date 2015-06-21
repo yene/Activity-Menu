@@ -12,7 +12,7 @@
 #include <net/if.h>
 #include <net/route.h>
 
-NSUInteger const MTU = 1500;
+NSUInteger const MENU_WIDTH = 50;
 
 @interface AppDelegate ()
 @property (weak) IBOutlet NSTextField *inLabel;
@@ -24,7 +24,9 @@ NSUInteger const MTU = 1500;
 @implementation AppDelegate {
   NSUInteger inBytes;
   NSUInteger outBytes;
-
+  NSStatusItem *statusItem;
+  NSTextField *inTextField;
+  NSTextField *outTextField;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -38,6 +40,40 @@ NSUInteger const MTU = 1500;
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
   // Insert code here to tear down your application
+}
+
+- (void)awakeFromNib {
+  statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+  //statusItem.button.title = @"hi";
+  CGFloat menuBarHeight = [[[NSApplication sharedApplication] mainMenu] menuBarHeight];
+  NSRect frame = NSMakeRect(0, 0, MENU_WIDTH, menuBarHeight);
+  NSView *view = [[NSView alloc] initWithFrame:frame];
+  
+  inTextField = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 11, MENU_WIDTH, 10)];
+  [inTextField setBezeled:NO];
+  [inTextField setDrawsBackground:NO];
+  [inTextField setEditable:NO];
+  [inTextField setSelectable:NO];
+  [inTextField setFont:[NSFont systemFontOfSize:10]];
+  [inTextField setAlignment:NSRightTextAlignment];
+  [view addSubview:inTextField];
+  
+  outTextField = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 2, MENU_WIDTH, 10)];
+  [outTextField setBezeled:NO];
+  [outTextField setDrawsBackground:NO];
+  [outTextField setEditable:NO];
+  [outTextField setSelectable:NO];
+  [outTextField setFont:[NSFont systemFontOfSize:10]];
+  [outTextField setAlignment:NSRightTextAlignment];
+  [view addSubview:outTextField];
+  
+  statusItem.view = view;
+  /*
+  CALayer *viewLayer = [CALayer layer];
+  [viewLayer setBackgroundColor:CGColorCreateGenericRGB(0.0, 0.0, 0.0, 0.4)]; //RGB plus Alpha Channel
+  [view setWantsLayer:YES]; // view's backing store is using a Core Animation Layer
+  [view setLayer:viewLayer];
+  */
 }
 
 - (void)update {
@@ -80,12 +116,11 @@ NSUInteger const MTU = 1500;
   
   NSUInteger newInBytes = totalibytes-inBytes;
   inBytes = totalibytes;
-  self.inLabel.stringValue = [[formatter stringFromByteCount:newInBytes] stringByAppendingString:@"/s"];
+  inTextField.stringValue = [[formatter stringFromByteCount:newInBytes] stringByAppendingString:@"/s"];
   
   NSUInteger newOutBytes = totalobytes-outBytes;
   outBytes = totalobytes;
-  self.outLabel.stringValue = [[formatter stringFromByteCount:newOutBytes] stringByAppendingString:@"/s"];
-  
+  outTextField.stringValue = [[formatter stringFromByteCount:newOutBytes] stringByAppendingString:@"/s"];
   
 }
 
