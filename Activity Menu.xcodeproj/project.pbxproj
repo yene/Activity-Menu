@@ -11,18 +11,7 @@
 		AE88AD851B371EC7005219EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AD841B371EC7005219EB /* main.m */; };
 		AE88AD871B371EC7005219EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE88AD861B371EC7005219EB /* Images.xcassets */; };
 		AE88AD8A1B371EC7005219EB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE88AD881B371EC7005219EB /* MainMenu.xib */; };
-		AE88AD961B371EC7005219EB /* Activity_MenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AD951B371EC7005219EB /* Activity_MenuTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		AE88AD901B371EC7005219EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AE88AD741B371EC7005219EB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AE88AD7B1B371EC7005219EB;
-			remoteInfo = "Activity Menu";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AE88AD7C1B371EC7005219EB /* Activity Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Activity Menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,20 +21,10 @@
 		AE88AD841B371EC7005219EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE88AD861B371EC7005219EB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AE88AD891B371EC7005219EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		AE88AD8F1B371EC7005219EB /* Activity MenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Activity MenuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE88AD941B371EC7005219EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE88AD951B371EC7005219EB /* Activity_MenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Activity_MenuTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AE88AD791B371EC7005219EB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE88AD8C1B371EC7005219EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,7 +38,6 @@
 			isa = PBXGroup;
 			children = (
 				AE88AD7E1B371EC7005219EB /* Activity Menu */,
-				AE88AD921B371EC7005219EB /* Activity MenuTests */,
 				AE88AD7D1B371EC7005219EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				AE88AD7C1B371EC7005219EB /* Activity Menu.app */,
-				AE88AD8F1B371EC7005219EB /* Activity MenuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,23 +71,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AE88AD921B371EC7005219EB /* Activity MenuTests */ = {
-			isa = PBXGroup;
-			children = (
-				AE88AD951B371EC7005219EB /* Activity_MenuTests.m */,
-				AE88AD931B371EC7005219EB /* Supporting Files */,
-			);
-			path = "Activity MenuTests";
-			sourceTree = "<group>";
-		};
-		AE88AD931B371EC7005219EB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AE88AD941B371EC7005219EB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,24 +91,6 @@
 			productReference = AE88AD7C1B371EC7005219EB /* Activity Menu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AE88AD8E1B371EC7005219EB /* Activity MenuTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AE88AD9C1B371EC7005219EB /* Build configuration list for PBXNativeTarget "Activity MenuTests" */;
-			buildPhases = (
-				AE88AD8B1B371EC7005219EB /* Sources */,
-				AE88AD8C1B371EC7005219EB /* Frameworks */,
-				AE88AD8D1B371EC7005219EB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AE88AD911B371EC7005219EB /* PBXTargetDependency */,
-			);
-			name = "Activity MenuTests";
-			productName = "Activity MenuTests";
-			productReference = AE88AD8F1B371EC7005219EB /* Activity MenuTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,10 +102,6 @@
 				TargetAttributes = {
 					AE88AD7B1B371EC7005219EB = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					AE88AD8E1B371EC7005219EB = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = AE88AD7B1B371EC7005219EB;
 					};
 				};
 			};
@@ -181,7 +119,6 @@
 			projectRoot = "";
 			targets = (
 				AE88AD7B1B371EC7005219EB /* Activity Menu */,
-				AE88AD8E1B371EC7005219EB /* Activity MenuTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,13 +130,6 @@
 			files = (
 				AE88AD871B371EC7005219EB /* Images.xcassets in Resources */,
 				AE88AD8A1B371EC7005219EB /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE88AD8D1B371EC7005219EB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,23 +145,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AE88AD8B1B371EC7005219EB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE88AD961B371EC7005219EB /* Activity_MenuTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AE88AD911B371EC7005219EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AE88AD7B1B371EC7005219EB /* Activity Menu */;
-			targetProxy = AE88AD901B371EC7005219EB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE88AD881B371EC7005219EB /* MainMenu.xib */ = {
@@ -346,42 +260,6 @@
 			};
 			name = Release;
 		};
-		AE88AD9D1B371EC7005219EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Activity MenuTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Activity Menu.app/Contents/MacOS/Activity Menu";
-			};
-			name = Debug;
-		};
-		AE88AD9E1B371EC7005219EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Activity MenuTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Activity Menu.app/Contents/MacOS/Activity Menu";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -401,14 +279,7 @@
 				AE88AD9B1B371EC7005219EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		AE88AD9C1B371EC7005219EB /* Build configuration list for PBXNativeTarget "Activity MenuTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE88AD9D1B371EC7005219EB /* Debug */,
-				AE88AD9E1B371EC7005219EB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
